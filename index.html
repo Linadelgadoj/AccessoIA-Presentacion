@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#112b29" />
+  <meta name="description" content="Presentación académica interactiva del MVP AccessoIA." />
+  <title>AccessoIA — Presentación</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./slides.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#slide-stage">Saltar a la diapositiva</a>
+  <main class="deck" id="deck">
+    <header class="topbar">
+      <a class="wordmark" href="#slide-1" aria-label="AccessoIA, inicio"><span class="brand-orbit" aria-hidden="true">a</span><span>ACCESSO<span class="mint">IA</span></span></a>
+      <div class="top-meta"><span class="live-dot" aria-hidden="true"></span><span>PROYECTO UNIVERSITARIO · MVP</span></div>
+      <button class="icon-button" id="notes-toggle" type="button" aria-expanded="false" aria-controls="notes-panel" title="Mostrar notas del presentador"><span aria-hidden="true">☷</span><span class="control-label">Notas</span></button>
+    </header>
+    <section class="stage" id="slide-stage" tabindex="-1" aria-label="Presentación" aria-live="polite" aria-atomic="true">
+      <div class="slides" id="slides"></div>
+    </section>
+    <aside class="notes-panel" id="notes-panel" hidden aria-label="Notas del presentador">
+      <div class="notes-head"><span class="eyebrow">GUION ORAL</span><button id="notes-close" class="plain-close" type="button" aria-label="Cerrar notas">×</button></div>
+      <p id="notes-text"></p>
+      <span class="notes-count" id="notes-count"></span>
+    </aside>
+    <footer class="controls" aria-label="Controles de presentación">
+      <div class="control-group"><button id="prev" class="nav-button" type="button" aria-label="Diapositiva anterior">← <span>Anterior</span></button><button id="next" class="nav-button primary" type="button" aria-label="Diapositiva siguiente"><span>Siguiente</span> →</button></div>
+      <div class="progress-wrap"><div class="progress-track" role="progressbar" aria-label="Progreso de la presentación" aria-valuemin="1" aria-valuemax="14" aria-valuenow="1"><span id="progress-fill"></span></div><span class="slide-counter" id="counter" aria-live="polite">01 <i>/</i> 14</span></div>
+      <div class="control-group secondary-controls"><button id="overview-open" class="icon-button" type="button" aria-haspopup="dialog"><span aria-hidden="true">▦</span><span class="control-label">Índice</span></button><button id="fullscreen" class="icon-button" type="button" aria-label="Activar pantalla completa"><span aria-hidden="true">⛶</span><span class="control-label">Pantalla</span></button></div>
+    </footer>
+    <div class="key-hint" aria-hidden="true">← → navegar <span>·</span> inicio / fin <span>·</span> N notas <span>·</span> F pantalla completa</div>
+  </main>
+  <dialog class="overview" id="overview" aria-labelledby="overview-title"><div class="overview-head"><div><span class="eyebrow">RECORRIDO</span><h2 id="overview-title">Índice de diapositivas</h2></div><button id="overview-close" class="plain-close" type="button" aria-label="Cerrar índice">×</button></div><nav id="overview-list" aria-label="Ir a una diapositiva"></nav></dialog>
+</body>
+</html>
